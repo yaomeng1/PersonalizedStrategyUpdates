@@ -1,5 +1,5 @@
 function remTime = findRemeetingTimesRateUniIni( mAdj,rateArray, varargin )
-% Computes remeeting times of the simple random walk on a graph
+% Compute eta_ij shown in Eq. (1) in the main text
 % given by its weighted adjacency matrix mAdj
 if ~issparse(mAdj)
     mAdj= sparse(mAdj);
