@@ -1,11 +1,7 @@
 function bcr = getBCratioRateUniIni( mAdj, rateArray,varargin )
 % Computes the critical b/c ratio for a graph given by weighted 
-% (replacement) adjacency
-% matrix mAdj. 
-% A first optional argument represents a distinct interaction matrix mInt
-% A second optional argument can be used to pass a precomputed matrix of
-% remeeting times. This is useful for analyzing different interaction
-% matrices with the same replacement matrix
+% adjacency matrix mAdj and arbitrary update rate (column vector). 
+
 
 n = length(mAdj);
 w = sum(mAdj);
