@@ -1,7 +1,7 @@
-# Personalised-strategy-updates-facilitate-the-emergence-of-cooperation-in-heterogeneous-populations
+# Evolution of collective cooperation under arbitrary strategy updates
 
 
-Code for the paper "Personalised strategy updates facilitate the emergence of cooperation in heterogeneous populations".
+Code for the paper "Evolution of collective cooperation under arbitrary strategy updates".
 
 The codes include the function:
 
