@@ -5,7 +5,7 @@ Code for the paper "Evolution of collective cooperation under arbitrary strategy
 
 The codes include the function:
 
-- `OptUpRat` to optimize the update rate for each individual given the adjacent matrix of any network;
+- `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio C*  given the adjacent matrix of any network;
 - `getBCratioRateUniIni` to calculate the theoretical critical ratio C* shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network;
 - `bcrRateApprox` to calculate the theoretical approximation shown in Eq. (3) in the main text.
 
