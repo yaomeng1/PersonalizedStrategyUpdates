@@ -1,4 +1,4 @@
-# Evolution-of-cooperation-under-personalized-strategy-updates
+# PersonalizedStrategyUpdates
 
 
 Code for paper "Personalised strategy updates dominate the evolution of collective cooperation".
