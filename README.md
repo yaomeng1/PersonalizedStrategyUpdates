@@ -1,7 +1,7 @@
-# Evolution of collective cooperation under arbitrary strategy updates
+# Evolution of collective cooperation under personalized strategy updates
 
 
-Code for the paper "Evolution of collective cooperation under arbitrary strategy updates".
+Code for the paper "Personalised strategy updates dominate the evolution of collective cooperation".
 
 The codes include the function:
 
