@@ -9,7 +9,7 @@ The codes include the functions:
 - `bcrRateApprox` to calculate the theoretical approximation shown in Eq. (3) in the main text;
 - `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio C*  given the adjacent matrix of any network;
 
-for theoretical calculations and the file "fixation_probability_personalized_rate.py" for numerical simulations.
+for theoretical calculations and the file `fixation_probability_personalized_rate.py` for numerical simulations.
 
 The function of each file is depicted at the beginning of each file.
 
