@@ -3,7 +3,7 @@
 
 Code for paper "Personalised strategy updates dominate the evolution of collective cooperation".
 
-The codes include the functions:
+The codes include the functions
 
 - `getBCratioRateUniIni` to calculate the theoretical critical ratio C* shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network;
 - `bcrRateApprox` to calculate the theoretical approximation shown in Eq. (3) in the main text;
