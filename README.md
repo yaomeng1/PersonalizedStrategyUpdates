@@ -13,6 +13,6 @@ for theoretical calculations and the file `fixation_probability_personalized_rat
 
 The function of each file is depicted at the beginning of each file.
 
-All codes are written by MathWorks Matlab R2021a and Python 3.8.
+All codes are written by MathWorks Matlab R2021a and Python 3.8.5.
 
 To run the code, make sure that all files are in the same folder.
