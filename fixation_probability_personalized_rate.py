@@ -12,6 +12,8 @@ import time
 import math
 import scipy.io as scio
 
+# Numerical simulations of the fixation probability given network adjacent matrix and individual update rates
+
 @jit(nopython=True)
 def rand_pick_list(pick_list, prob_list):
     x = random.uniform(0, 1)
