@@ -55,5 +55,5 @@ The other functions are subfunctions needed to run the above three functions, an
 
 
 
-Note: To run the code, make sure that all files are in the same folder.
+Note: to run the code, make sure that all files are in the same folder.
 
