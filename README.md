@@ -11,9 +11,9 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
 
   - Input: 
 
-    1. the adjacent matrix of any given network ("sf_100_k6.mat" in this repository)
-    2. individual update rates
-    3. an array of benefit-to-cost ratio
+    - the adjacent matrix of any given network ("sf_100_k6.mat" in this repository)
+    - individual update rates
+    - an array of benefit-to-cost ratio
 
   - Output: an array of corresponding fixation probability of cooperation ($\rho_C$)
 
@@ -33,21 +33,21 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
 
 - `getBCratioRateUniIni`  is used to calculate the theoretical critical ratio $C^*$ shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
   - Input: 
-    1. the adjacent matrix of any given network
-    2. individual update rates
+    - the adjacent matrix of any given network
+    - individual update rates
   - Output: Critical benefit-to-cost ratio $C^*$
   - **Demo**: We provide the demo file "demo_bcr_PersonalizedRate.m" to calculate theoretical $C^*$ of the scale-free network in Fig. 2a-c. 
 - `bcrRateApprox` to calculate the approximated results shown in Fig. 4b using Eq. (3)  in the main text. 
   - Input: 
-    1. the adjacent matrix of any given network
-    2. individual update rates
+    - the adjacent matrix of any given network
+    - individual update rates
   - Output: Approximated critical benefit-to-cost ratio $C^*$ 
   - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical critical ratio calculated using Eq. (1).
 - `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
   - Input: the adjacent matrix of any given network
   - Output: 
-    1. An array of the critical ratio $C^*$ (iteration steps * 1)
-    2. An array of update rates (network size * iteration steps)
+    - An array of the critical ratio $C^*$ (iteration steps * 1)
+    - An array of update rates (network size * iteration steps)
   - **Demo**: We provide the demo file "demo_OptUpRat.m" to optimize update rates of a given scale-free network (Fig. 5d, e in the main text), and the output file `output_sf_100_k6_OptimalUpdateRate.mat.mat` to show the results of optimization.  `rate_process` records the iteration process of update rates, and `bcr_array` records the iterations of critical ratio. Note that the optimal rates can be obtained by taking the last column, and the corresponding minimal  $C^*$ is the last element of `bcr_array`.
 
 
