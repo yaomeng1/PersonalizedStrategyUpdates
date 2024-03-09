@@ -42,7 +42,7 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
     1. the adjacent matrix of any given network
     2. individual update rates
   - Output: Approximated critical benefit-to-cost ratio $C^*$ 
-  - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file  "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical  $C^*$  calculated using Eq. (1).
+  - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical critical ratio calculated using Eq. (1).
 - `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
   - Input: the adjacent matrix of any given network
   - Output: 
