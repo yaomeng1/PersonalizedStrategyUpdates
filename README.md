@@ -3,16 +3,57 @@
 
 Code for paper "Personalised strategy updates dominate the evolution of collective cooperation".
 
-The codes include the functions
+The codes include program for numerical simulations (written by Python 3.8.5) and functions for theoretical calculations (written by MathWorks Matlab R2021a). The details for these codes are as follow:
 
-- `getBCratioRateUniIni` to calculate the theoretical critical ratio C* shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network;
-- `bcrRateApprox` to calculate the theoretical approximation shown in Eq. (3) in the main text;
-- `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio C*  given the adjacent matrix of any network;
+#### Numerical simulation
 
-for theoretical calculations and the file `fixation_probability_personalized_rate.py` for numerical simulations.
+- "fixation_probability_personalized_rate.py" is used to numerically obtain the fixation probability of cooperation ($\rho_C$) through benefit-to-cost ratio in Fig. 2a-d in the main text. 
 
-The function of each file is depicted at the beginning of each file.
+  - Input: 
 
-All codes are written by MathWorks Matlab R2021a and Python 3.8.5.
+    1. the adjacent matrix of any given network ("sf_100_k6.mat" in this repository)
+    2. individual update rates
+    3. an array of benefit-to-cost ratio
 
-To run the code, make sure that all files are in the same folder.
+  - Output: an array of corresponding fixation probability of cooperation ($\rho_C$)
+
+  - **Demo**: We provide the output file of the simulation results with a scale-free network used in Fig. 2a-c, under the settings of update rates ($\lambda_i=1, 1/k_i, k_i$) respectively. The corresponding file names are:
+
+    - "output_sf_n100_k6_IdenticalRate_lambda_1.mat"
+    - "output_sf_n100_k6_IdenticalRate_lambda_1_k.mat"
+    - "output_sf_n100_k6_IdenticalRate_lambda_k.mat".
+
+    Each file contains an array of benefit-to-cost ratio (`b_array`), and an array of corresponding $\rho_C$ (`rhoc_array`)，which is exactly the results with scale-free network in Fig. 2a-c. 
+   - **Requirements**: To run this file, see the requirements in file "requirements.txt"
+
+ To reproduce the plots in Fig. 2a-c, run this file and calculate the theoretical $C^*$ using `getBCratioRateUniIni` as below. 
+
+
+#### Theoretical calculation
+
+- `getBCratioRateUniIni`  is used to calculate the theoretical critical ratio $C^*$ shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
+  - Input: 
+    1. the adjacent matrix of any given network
+    2. individual update rates
+  - Output: Critical benefit-to-cost ratio $C^*$
+  - **Demo**: We provide the demo file "demo_bcr_PersonalizedRate.m" to calculate theoretical $C^*$ of the scale-free network in Fig. 2a-c. 
+- `bcrRateApprox` to calculate the approximated results shown in Fig. 4b using Eq. (3)  in the main text. 
+  - Input: 
+    1. the adjacent matrix of any given network
+    2. individual update rates
+  - Output: Approximated critical benefit-to-cost ratio $C^*$ 
+  - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file  "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical  $C^*$  calculated using Eq. (1).
+- `OptUpRat` to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
+  - Input: the adjacent matrix of any given network
+  - Output: 
+    1. An array of the critical ratio $C^*$ (iteration steps * 1)
+    2. An array of update rates (network size * iteration steps)
+  - **Demo**: We provide the demo file "demo_OptUpRat.m" to optimize update rates of a given scale-free network (Fig. 5d, e in the main text), and the output file `output_sf_100_k6_OptimalUpdateRate.mat.mat` to show the results of optimization.  `rate_process` records the iteration process of update rates, and `bcr_array` records the iterations of  $C^*$. Note that the optimal rates can be obtained by taking the last column, and the corresponding minimal  $C^*$ is the last element of `bcr_array`.
+
+
+The other functions are subfunctions needed to run the above three functions, and the function of each file is depicted at the beginning of each file.
+
+
+
+Note: To run the code, make sure that all files are in the same folder.
+
