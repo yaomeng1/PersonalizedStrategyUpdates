@@ -1,32 +1,28 @@
-function bcr = getBCratioRateUniIni( mAdj, rateArray,varargin )
-% Computes the critical b/c ratio for a graph given by weighted 
-% adjacency matrix mAdj and arbitrary update rate (column vector). 
+function bcr = getBCratioRateUniIni( mAdj, rateArray)
+% Computes the critical benefit-to-cost ratio C* for favouring cooperation 
+% starting from any network and update rates according to Eq. (1) in the main text. 
+% Input: mAdj: input network adjacent matrix
+% Input: rateArray: column array of individual update rates
+% Output: bcr: output critical benefit-to-cost ratio in Eq. (1) in the main text
 
 
-n = length(mAdj);
-w = sum(mAdj);
+n = length(mAdj); % network size
+w = sum(mAdj);  % degree of nodes
 W = sum(w);
-pi = (w/W).';
-if length(varargin) < 2
-    Rem = findRemeetingTimesRateUniIni(mAdj,rateArray);
-else
-    Rem = varargin{2};
-end;
-Rem = Rem - diag(diag(Rem));
-if length(varargin) < 1
-    mInt = mAdj;
-else
-    mInt = varargin{1};
-end
-P10 = normalizedLaplacian(mAdj)+speye(n);
-P01 = normalizedLaplacian(mInt)+speye(n);
-P20 = P10 * P10;
-P21 = P20 * P01;
+pi = (w/W).';     
 
-T20 = sum((P20.*Rem).')*pi;
-T21 = sum((P21.*Rem).')*pi;
-T01 = sum((P01.*Rem).')*pi;
-bcr = T20 / (T21 - T01);
+Rem = findRemeetingTimesRateUniIni(mAdj,rateArray); % compute coalescence time according to Eq. (7) in the main text
+Rem = Rem - diag(diag(Rem));
+
+P1 = normalizedLaplacian(mAdj)+speye(n);  % P1(i,j): probability of one-step random walk from i to j 
+P2 = P1 * P1;  % P2(i,j): probability of 2-step random walk from i to j 
+P3 = P2 * P1;  % P3(i,j): probability of 3-step random walk from i to j 
+ 
+eta_1 = sum((P1.*Rem).')*pi; % eta^{(1)} in Equation (S6) in the supplementary information
+eta_2 = sum((P2.*Rem).')*pi; % eta^{(2)} in Equation (S6) in the supplementary information
+eta_3 = sum((P3.*Rem).')*pi; % eta^{(3)} in Equation (S6) in the supplementary information
+
+bcr = eta_2 / (eta_3 - eta_1); % calculate the critical ratio according to Eq. (1) in the main text
 
 end
 
