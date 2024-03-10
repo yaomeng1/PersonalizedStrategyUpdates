@@ -190,7 +190,7 @@ if __name__ == "__main__":
     #     static_matrix = pickle.load(f)
 
     # obtain the numpy array of edges, neighbors, and nodes' degree
-    graph = nx.from_numpy_matrix(static_matrix)
+    graph = nx.from_numpy_array(static_matrix)
     edge_list = list(graph.edges())
     edge_mat = edge_list_array(edge_list)  # numpy array of edges
     nbrs_dict = nx.to_dict_of_lists(graph)
