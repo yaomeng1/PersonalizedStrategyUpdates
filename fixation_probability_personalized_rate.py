@@ -2,15 +2,16 @@ import networkx as nx
 import random
 import numpy as np
 import pickle
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from numba import jit
 import os
 import multiprocessing
-from multiprocessing import Process, Manager
+# from multiprocessing import Process, Manager
 import functools
 import time
 import math
 import scipy.io as scio
+
 
 
 # Numerical simulations of the fixation probability of cooperation (rho_c) given
