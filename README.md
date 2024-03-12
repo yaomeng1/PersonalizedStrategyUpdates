@@ -23,7 +23,7 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
     - "output_sf_n100_k6_IdenticalRate_lambda_1_k.mat"
     - "output_sf_n100_k6_IdenticalRate_lambda_k.mat".
 
-    Each file contains an array of benefit-to-cost ratio (`b_array`), and an array of corresponding $\rho_C$ (`rhoc_array`)，which is exactly the results with scale-free network in Fig. 2a-c. 
+    Each file contains an array of benefit-to-cost ratio (`b_array`), and an array of corresponding $\rho_C$ (`rhoc_array`)，which is exactly the results with the scale-free network in Fig. 2a-c. 
    - **Requirements**: see the list of packages needed in requirements.txt.
    - **Other instructions**: Please set the variable `cpu_cores_num` to the number of CPU cores on the local computer.
      
