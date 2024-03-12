@@ -9,7 +9,6 @@ function [rate_process,bcr_array] = OptUpRat(mAdj)
 
 n = length(mAdj); %network size
 epoch = 10000;  % maximum steps of iterations
-epoch = 10;  % maximum steps of iterations
 
 epsilon = 1e-6; % a small constant to prevent division by zero
 eta = 1; % learning rate
