@@ -32,13 +32,13 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
 
 #### Theoretical calculation
 
-- "getBCratioRateUniIni.m" is used to calculate the theoretical critical ratio $C^*$ shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
+- "getBCratioRateUniIni.m" is used to calculate the theoretical critical ratio $C^*$ in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
   - Input: 
     - the adjacent matrix of any given network
     - individual update rates
   - Output: Critical benefit-to-cost ratio $C^*$
   - **Demo**: We provide the demo file "demo_bcr_PersonalizedRate.m" to calculate theoretical $C^*$ of the scale-free network in Fig. 2a-c. 
-- "bcrRateApprox.m" is used to calculate the approximated results shown in Fig. 4b using Eq. (3)  in the main text. 
+- "bcrRateApprox.m" is used to calculate the approximated results shown in Fig. 5b using Eq. (3)  in the main text. 
   - Input: 
     - the adjacent matrix of any given network
     - individual update rates
