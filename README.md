@@ -1,7 +1,7 @@
 # PersonalizedStrategyUpdates
 
 
-Code for paper "Personalised strategy updates dominate the evolution of collective cooperation".
+Code for paper "Evolution of collective cooperation under personalised strategy updates".
 
 The codes include program for numerical simulations (written by Python 3.8.5) and functions for theoretical calculations (written by MathWorks Matlab R2021a). The details for these codes are as follow:
 
