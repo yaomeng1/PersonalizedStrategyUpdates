@@ -27,24 +27,24 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
    - **Requirements**: see the list of packages needed in requirements.txt.
    - **Other instructions**: Please set the variable `cpu_cores_num` to the number of CPU cores on the local computer.
      
- To reproduce the plots in Fig. 2a-c, run this file and calculate the theoretical $C^*$ using `getBCratioRateUniIni` as below. 
+ To reproduce the plots in Fig. 2a-c, run this file and calculate the theoretical $C^*$ using "getBCratioRateUniIni.m" as below. 
 
 
 #### Theoretical calculation
 
-- `getBCratioRateUniIni`  is used to calculate the theoretical critical ratio $C^*$ shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
+- "getBCratioRateUniIni.m" is used to calculate the theoretical critical ratio $C^*$ shown in Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
   - Input: 
     - the adjacent matrix of any given network
     - individual update rates
   - Output: Critical benefit-to-cost ratio $C^*$
   - **Demo**: We provide the demo file "demo_bcr_PersonalizedRate.m" to calculate theoretical $C^*$ of the scale-free network in Fig. 2a-c. 
-- `bcrRateApprox` is used to calculate the approximated results shown in Fig. 4b using Eq. (3)  in the main text. 
+- "bcrRateApprox.m" is used to calculate the approximated results shown in Fig. 4b using Eq. (3)  in the main text. 
   - Input: 
     - the adjacent matrix of any given network
     - individual update rates
   - Output: Approximated critical benefit-to-cost ratio $C^*$ 
   - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical critical ratio calculated using Eq. (1).
-- `OptUpRat` is used to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
+- "OptUpRat.m" is used to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
   - Input: the adjacent matrix of any given network
   - Output: 
     - An array of the critical ratio $C^*$ (iteration steps * 1)
