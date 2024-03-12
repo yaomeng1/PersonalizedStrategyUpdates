@@ -49,7 +49,7 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
   - Output: 
     - An array of the critical ratio $C^*$ (iteration steps * 1)
     - An array of update rates (network size * iteration steps)
-  - **Demo**: We provide the demo file "demo_OptUpRat.m" to optimize update rates of a given scale-free network (Fig. 5d, e in the main text), and the output file "output_sf_100_k6_OptimalUpdateRate.mat" to show the results of optimization.  `rate_process` records the iteration process of update rates, and `bcr_array` records the iterations of critical ratio. Note that the optimal rates can be obtained by taking the last column, and the corresponding minimal  $C^*$ is the last element of `bcr_array`.
+  - **Demo**: We provide the demo file "demo_OptUpRat.m" to optimize update rates of a given scale-free network (Fig. 5d, e in the main text), and the output file "output_sf_100_k6_OptimalUpdateRate.mat" to show the results of optimization.  `rate_process` records the iteration process of update rates, and `bcr_array` records the iterations of critical ratio. Note that the optimal rates can be obtained by taking the last column of `rate_process`, and the corresponding minimal $C^*$ is the last element of `bcr_array`.
 
 
 The other functions are subfunctions needed to run the above three functions, and the function of each file is depicted at the beginning of each file.
