@@ -1,6 +1,6 @@
 clear
 clc
-load("sf_100_k6.mat") 
+load("sf_n100_k6_idx1.mat") 
 mAdj=A_sf; % adjacent marix of network
 n = length(mAdj); % network size
 [rate_process,bcr_array] = OptUpRat(mAdj);  % optimize individual update rate given a network structure

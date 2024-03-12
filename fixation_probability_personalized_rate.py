@@ -13,7 +13,6 @@ import math
 import scipy.io as scio
 
 
-
 # Numerical simulations of the fixation probability of cooperation (rho_c) given
 # a network adjacent matrix and individual update rates
 
@@ -185,7 +184,7 @@ def nbr_dict_mat(nbr_dict):
 
 
 if __name__ == "__main__":
-    static_matrix = scio.loadmat("sf_100_k6.mat")["A_sf"]  # import the adjacent matrix from the datatype of mat
+    static_matrix = scio.loadmat("sf_n100_k6_idx0.mat")["A_sf"]  # import the adjacent matrix from the datatype of mat
     # with open("./result/sf_100_k6_0.pk", 'rb') as f:      # or import the adjacent matrix from a pickle file
     #     static_matrix = pickle.load(f)
 
@@ -226,7 +225,7 @@ if __name__ == "__main__":
         print("b="+str(b_para)+",", "rho_c="+str(rho_c))
         print("Total time:" + (t2 - t1).__str__())
 
-    file = "sf_n100_k6_PersonalizedRate_lambda_1_k.mat"
+    file = "sf_n100_k6_idx0_PersonalizedRate_lambda_1_k.mat"
 
     # output: array of the benefit b, and array of the corresponding fixation probability of cooperation (rho_c)
     # note: here the cost c=1 (see the game matrix), therefore b/c is equal to b

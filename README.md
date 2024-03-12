@@ -11,7 +11,7 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
 
   - Input: 
 
-    - the adjacent matrix of any given network ("sf_100_k6.mat" in this repository)
+    - the adjacent matrix of any given network ("sf_n100_k6_idx0.mat" in this repository)
     - individual update rates
     - an array of benefit-to-cost ratio
 
@@ -27,25 +27,26 @@ The codes include program for numerical simulations (written by Python 3.8.5) an
    - **Requirements**: see the list of packages needed in requirements.txt.
    - **Other instructions**: Please set the variable `cpu_cores_num` to the number of CPU cores on the local computer.
      
- To reproduce the plots in Fig. 2a-c, run this file and calculate the theoretical $C^*$ using "getBCratioRateUniIni.m" as below. 
+
+ To reproduce the plots in Fig. 2a-c, run this file and calculate the numerical and theoretical $C^*$ using "getBCratioRateUniIni.m" as below. 
 
 
 #### Theoretical calculation
 
 - "getBCratioRateUniIni.m" is used to calculate the theoretical critical ratio $C^*$ using Eq. (1) in the main text, where the evolutionary game process starts from a single cooperator placed uniformly at random on the network.
   - Input: 
-    - the adjacent matrix of any given network
+    - the adjacent matrix of any given network ("sf_n100_k6_idx0.mat" in this repository)
     - individual update rates
   - Output: Critical benefit-to-cost ratio $C^*$
   - **Demo**: We provide the demo file "demo_bcr_PersonalizedRate.m" to calculate theoretical $C^*$ of the scale-free network in Fig. 2a-c. 
 - "bcrRateApprox.m" is used to calculate the approximated results shown in Fig. 5b using Eq. (3)  in the main text. 
   - Input: 
-    - the adjacent matrix of any given network
+    - the adjacent matrix of any given network ("sf_n100_k6_idx0.mat" in this repository)
     - individual update rates
   - Output: Approximated critical benefit-to-cost ratio $C^*$ 
   - **Demo**: The approximated $C^*$ of the scale-free network in Fig. 2a-c is provided in file "demo_bcr_PersonalizedRate.m".  The accuracy can be checked with the theoretical critical ratio calculated using Eq. (1) in the same demo.
 - "OptUpRat.m" is used to optimize the update rate for each individual to minimize the critical ratio $C^*$  given the adjacent matrix of any network;
-  - Input: the adjacent matrix of any given network
+  - Input: the adjacent matrix of any given network ("sf_n100_k6_idx1.mat" in this repository)
   - Output: 
     - An array of the critical ratio $C^*$ (iteration steps * 1)
     - An array of update rates (network size * iteration steps)
